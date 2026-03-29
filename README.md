@@ -1,77 +1,72 @@
 # 💸 Cash Flow Minimizer
 
 <p align=center>
-<img src="images/ChashFlowGui_Demo.png" label="GearHub Header">
+  <img src="images/ChashFlowGui_Demo.png" label="GearHub Header">
 </p>
 
-### Data Structures & Algorithms | University Milestone Project (UIT)
+### Efficient Debt Settlement System | University Project
 
-The **Cash Flow Minimizer** is a specialized financial utility that reduces the complexity of group debts. By analyzing "who owes whom," the system eliminates redundant transactions and provides the most efficient path to settle all accounts using a **Greedy Algorithmic approach**.
-
----
-
-## 🧠 The Algorithm (Greedy Approach)
-This project solves the "Splitwise" problem by calculating the net amount for every individual:
-1. **Net Amount Calculation:** `(Total Received - Total Paid)`. 
-2. **Classification:** Individuals are separated into **Debtors** (negative net) and **Creditors** (positive net).
-3. **Greedy Pairing:** Using a **Max-Heap (PriorityQueue)**, the system repeatedly settles the maximum debtor with the maximum creditor until all debts are zero.
+**Cash Flow Minimizer** is a Java-based desktop application that streamlines complex financial transactions within groups. Instead of everyone paying everyone, this tool uses a **Greedy Algorithm** to find the absolute minimum number of payments required to settle all debts.
 
 ---
 
-## 🚀 Key Features
-- **Dynamic Input:** Add multiple transactions between different people with varied amounts.
-- **Real-time Minimization:** Instantly calculates the minimum number of transactions required.
-- **Intuitive GUI:** Built with Java Swing `GridBagLayout` for a clean, organized user interface.
-- **Transaction History:** View your raw input list before running the minimization logic.
+## 🖥️ Application Flow
+The application is designed with a user-friendly interface divided into three main modules:
+1. **🏠 Home Page:** The main dashboard with navigation buttons to start a new session or learn about the logic.
+2. **📝 Transaction Manager:** A dynamic input screen to record who owes what.
+3. **⚙️ Minimization Engine:** The core DSA module that pairs debtors and creditors to settle accounts efficiently.
 
 ---
 
-## 🏗️ Technical Implementation
-- **Data Structures:** - `HashMap`: To store and update net amounts for each person.
-  - `PriorityQueue`: To efficiently fetch the largest creditors and debtors for settlement.
-  - `ArrayList`: To manage the transaction history.
-- **GUI Framework:** Java Swing (BorderLayout, GridBagLayout).
+## 🧠 The "Greedy" Logic
+The system uses a **Max-Heap (Priority Queue)** approach:
+- It identifies the person with the most debt (**Maximum Debtor**) and the person who is owed the most (**Maximum Creditor**).
+- It settles the maximum amount possible between them.
+- This process repeats until all net amounts are zero.
+- **Complexity:** This ensures a minimal number of transactions ($N-1$ at most, where $N$ is the number of people).
 
 ---
 
-## 📂 Project Structure
+## 🛠️ Tech Stack & Folder Structure
+- **Language:** Java
+- **Framework:** Java Swing (AWT for Layouts)
+- **Data Structures:** `HashMap`, `PriorityQueue`, `ArrayList`
+
 ```text
 .
-├── CashFlowMinimizerGUI.java  # Core Logic and GUI implementation
-├── HomePage.java              # Application Landing Page
-├── HowItWorksPage.java        # Documentation/Help screen
-└── Project_Report.pdf         # Detailed DSA analysis and testing
-```
+├── HomePage.java              # Entry point & Navigation Menu
+├── CashFlowMinimizerGUI.java  # Main Logic & Transaction Entry
+├── HowItWorksPage.java        # Documentation & Algorithm Explanation
+└── Project_Report.pdf         # Detailed DSA analysis
+````
 
----
+-----
 
-## ⚙️ How to Run
-1. **Clone the Repo:**
-   
-   ```bash
-   git clone https://github.com/SHADOWRULIN/Cash-Flow-Minimizer-Java-DSA.git
-   ```
-2. **Compile:** Ensure you have the JDK installed.
-   
-   ```bash
-   javac CashFlowMinimizerGUI.java
-   ```
-3. **Execute:**
-   
-   ```bash
-   java CashFlowMinimizerGUI
-   ```
+## 🚀 How to Run
 
----
+Since this project uses modern Java standards, you can launch the entry point directly:
+
+1.  **Clone the Repo:**
+
+    ```bash
+    git clone https://github.com/SHADOWRULIN/Cash-Flow-Minimizer-DSA.git
+    ```
+2.  **Execute the Home Page:** Ensure you have the JDK installed.
+
+    ```bash
+    java HomePage.java
+    ```
+    
+-----
 
 ## 👤 Author
-**Muhammad Fahaz Khan**
-*Computer Science Student at UIT University*
 
-- **GitHub:** [@SHADOWRULIN](https://github.com/SHADOWRULIN)
-- **LinkedIn:** [Fahaz Khan](https://www.linkedin.com/in/muhammad-fahaz-khan-85b805293/)
+**Muhammad Fahaz Khan** *Computer Science Undergraduate | UIT University*
 
----
+  - **GitHub:** [@SHADOWRULIN](https://github.com/SHADOWRULIN)
+  - **LinkedIn:** [Fahaz Khan](https://www.linkedin.com/in/muhammad-fahaz-khan-85b805293/)
+
+----
 
 ## 📄 License
 This project is licensed under the **MIT License**.
