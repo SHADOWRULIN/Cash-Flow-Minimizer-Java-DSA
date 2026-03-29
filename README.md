@@ -1,4 +1,9 @@
 # 💸 Cash Flow Minimizer
+
+<p align=center>
+<img src="images/ChashFlowGui_Demo.png" label="GearHub Header">
+</p>
+
 ### Data Structures & Algorithms | University Milestone Project (UIT)
 
 The **Cash Flow Minimizer** is a specialized financial utility that reduces the complexity of group debts. By analyzing "who owes whom," the system eliminates redundant transactions and provides the most efficient path to settle all accounts using a **Greedy Algorithmic approach**.
