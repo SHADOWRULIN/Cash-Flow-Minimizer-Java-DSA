@@ -49,7 +49,7 @@ Since this project uses modern Java standards, you can launch the entry point di
 1.  **Clone the Repo:**
 
     ```bash
-    git clone https://github.com/SHADOWRULIN/Cash-Flow-Minimizer-DSA.git
+    git clone https://github.com/SHADOWRULIN/Cash-Flow-Minimizer-Java-DSA.git
     ```
 2.  **Execute the Home Page:** Ensure you have the JDK installed.
 
